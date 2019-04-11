@@ -1,0 +1,110 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+#background{
+  background-color: #fff;
+  background-image: url(background.jpg);
+  background-position: center;
+  background-size: cover;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+#bottomBackground{
+  background-color: black;
+  height: 25%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
+/* ----------------------------------------------------------- */
+
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.links a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin-right: 30px;
+  margin-top: 15px;
+  float: right;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.name a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  float: left;
+  margin-left: 30px;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 35pt;
+}
+
+.navbar a:hover {
+  color: rgb(51, 204, 255);
+}
+
+/* ----------------------------------------------------------- */
+
+.leftButton {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 150pt;
+  border-radius: 30px;
+  margin-left: 300px;
+  display: block;
+}
+.rightButton {
+  background-color: gray;
+  float: right;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  word-spacing: 5px;
+  margin-top: 20pt;
+  border-radius: 35px;
+  margin-right: 250px;
+  display: block;
+}
+.leftButton:hover {
+  background-color: rgb(34, 154, 193);
+  color: white;
+}
+.rightButton:hover {
+  background-color: rgb(34, 154, 193);
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.quotes{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  margin-top: 170pt;
+  margin-left: 80px;
+  font-size: 35px;
+}
+

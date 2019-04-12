@@ -3,6 +3,7 @@ html, body{
   margin: 0;
   height: 100%;
 }
+
 #background{
   background-color: #fff;
   background-image: url(background.jpg);
@@ -12,6 +13,7 @@ html, body{
   height: 100%;
   width: 100%;
 }
+
 #bottomBackground{
   background-color: black;
   height: 25%;
@@ -61,6 +63,8 @@ html, body{
 
 /* ----------------------------------------------------------- */
 
+/*
+
 .leftButton {
   background-color: gray;
   border: none;
@@ -74,21 +78,37 @@ html, body{
   margin-left: 300px;
   display: block;
 }
-.rightButton {
+*/
+.rightButton{
   background-color: gray;
   float: right;
   border: none;
   color: white;
-  padding: 12px 32px;
+  padding: 12px 28px;
   text-align: center;
   text-decoration: none;
   font-size: 30px;
   word-spacing: 5px;
+  letter-spacing: 1px;
   margin-top: 20pt;
   border-radius: 35px;
   margin-right: 250px;
   display: block;
 }
+
+.rightButton a{
+  float: right;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  word-spacing: 5px;
+  margin-top: 0pt;
+  margin-right: 0px;
+  display: block;
+}
+
 .leftButton:hover {
   background-color: rgb(34, 154, 193);
   color: white;

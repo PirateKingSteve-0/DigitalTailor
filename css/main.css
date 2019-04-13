@@ -1,0 +1,64 @@
+/* -----------Footer-styling---------------------------------- */
+
+footer{
+  background-color: black;
+  height: 5%;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding-top: .5%;
+}
+
+/* -----------Navbar-styling---------------------------------- */
+
+.navbar{
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.nav-link {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.navbar-brand{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  float: left;
+  text-decoration: none;
+  font-size: 24pt;
+}
+
+/* -----------Overwriting-Bootstrap-styling------------------ */
+
+.container-fluid {
+  padding: 0px;
+}
+
+.row{
+  padding: 0px;
+}
+
+.col-12{
+  padding-right: 0px;
+}
+
+/* -----------Responsive-styling-for-devices----------------- */
+
+@media only screen and (max-width: 992px){
+  .navbar{
+    height: auto;
+  }
+  body{
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .navbar{
+    height: 5%;
+  }
+  body{
+    overflow-y: hidden;
+  }
+}

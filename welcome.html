@@ -1,28 +1,56 @@
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <title>Digital Tailor</title>
-    <link rel="stylesheet" type="text/css" href="welcome.css">
-    <link href="dressingRoom.html" rel="pages">
-    <link href="about.html" rel="pages">
+    <!-- Enable viewport and media queries -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="navbar">
-      <div class="name">
-        <a href="welcome.html">Digital Tailor</a>
-      </div>
-      <div class="links">
-        <a href="about.html">About</a>
-        <a href="welcome.html">Home</a>
-      </div>
-    </div>
+    <!-- Load Font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- JS, Popper,js, and JQuery from Bootstrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <title>Digital Tailor</title>
   </head>
   <body>
-    <div id="background">
-      <h1 class='quotes'>"When in doubt, wear red." - Bill Blass</h1>
-      <button class="rightButton" type="button"> <a href="dressingRoom.html">Get Dressed</a> </button>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Digital Tailor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navbar-nav mr-auto">
+                  <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link" href="about.html">About</a>
+              </div>
+            </div>
+          </nav>
+        </div>  
+      </div>
+      <div class="row">
+        <div class="col-12 background">
+          <h1 class='quotes'>"When in doubt, wear red." - Bill Blass</h1>
+          <button class="rightButton" type="button"> <a href="dressingRoom.html">Get Dressed</a> </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <footer>
+            &#169 2019 Stephen Lastimosa George Steven Andrew All Rights Reserved
+          </footer>
+        </div>
+      </div>  
     </div>
   </body>
-  <footer>
-    <div id="bottomBackground"> &#169 2019 Stephen Lastimosa George Steven Andrew All Rights Reserved</div>
-  </footer>
 </html>

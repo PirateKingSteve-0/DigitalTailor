@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.background{
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 90%
+}
+
+.images{
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .7);
+  overflow: scroll;
+}
+
+.rightMenu{
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  background-color: rgba(255, 255, 255);
+}
+
+.rightMenu > h1{
+  text-align: center;
+}
+
+.selectedItems{
+  height: 100%;
+}

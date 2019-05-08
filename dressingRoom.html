@@ -24,7 +24,7 @@
 
     <!-- Load H&M API -->
     <script src="api.js"></script>
-    
+
     <title>Tailor Me</title>
   </head>
   <body>
@@ -40,11 +40,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="navbar-nav mr-auto">
                   <a class="nav-item nav-link" href="welcome.html">Home <span class="sr-only">(current)</span></a>
-                  <a class="nav-item nav-link" href="about.html">About</a>
+                  <a class="nav-item nav-link" href="welcome.html#bottomBackground">About</a>
               </div>
             </div>
           </nav>
-        </div>  
+        </div>
       </div>
 
       <!-- Main Content -->
@@ -54,7 +54,15 @@
             <div class="col-6">
               <div class="row wardrobe">
                 <div class="col-12">
-                  <input class="form-control" type="text" placeholder="Search..." width="100%">
+                  <!-- <input id="form-control" type="text" placeholder="Search..." width="100%"> -->
+                  <button id="1" onclick="searchAPI(this)">All</button>
+                  <button id="2" onclick="searchAPI(this)">Shirts</button>
+                  <button id="3" onclick="searchAPI(this)">Pants</button>
+                  <button id="4" onclick="searchAPI(this)">Shorts</button>
+                  <button id="5" onclick="searchAPI(this)">Jackets</button>
+                  <button id="6" onclick="searchAPI(this)">Hoodies</button>
+                  <button id="7" onclick="searchAPI(this)">Longsleeves</button>
+                  <button id="8" onclick="searchAPI(this)">Blazers</button>
                 </div>
                 <div class="col-12">
                   <div class="images"></div>
@@ -81,7 +89,7 @@
             &#169 2019 Stephen Lastimosa George Steven Andrew All Rights Reserved
           </footer>
         </div>
-      </div>  
+      </div>
     </div>
   </body>
 </html>

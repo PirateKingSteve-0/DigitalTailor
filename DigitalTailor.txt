@@ -1,6 +1,0 @@
-//Changes made to
-	- welcome.html
-	- main.css
-	- welcome.css
-	- about.html (just more link)
-	- dressingRoom.html (just more link)

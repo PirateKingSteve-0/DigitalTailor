@@ -104,6 +104,7 @@ function searchAPI(button) {
         }
     }).then(res => res.json())
         .then(function (data){
+            $(".images").empty();
             for(let i = 0; i < data['results'].length; i++){
                 var image = data['results'][i]['images'][0]['url'];
                 $(".images").append(`<img src="${image}" style="width:25%">`);

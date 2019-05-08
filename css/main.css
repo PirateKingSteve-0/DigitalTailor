@@ -1,6 +1,6 @@
 /* -----------Footer-styling---------------------------------- */
 
-footer{
+/* footer{
   background-color: black;
   height: 5%;
   font-family: 'Raleway', sans-serif;
@@ -8,7 +8,7 @@ footer{
   text-align: center;
   align-items: center;
   padding-top: .5%;
-}
+} */
 
 /* -----------Navbar-styling---------------------------------- */
 
@@ -43,6 +43,22 @@ footer{
   padding-right: 0px;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3rem;
+    padding-left: .5rem;
+}
+.mr-auto, .mx-auto {
+    /* margin-left: auto!important; */
+    position: absolute;
+    right: 50px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-weight: 600;
+}
+.nav-item .nav-link .active{
+  color: blue;
+}
 /* -----------Responsive-styling-for-devices----------------- */
 
 @media only screen and (max-width: 992px){
@@ -58,7 +74,7 @@ footer{
   .navbar{
     height: 5%;
   }
-  body{
+  /* body{
     overflow-y: hidden;
-  }
+  } */
 }

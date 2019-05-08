@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
 .background{
   background-image: url(../images/background.jpg);
   background-position: center;
   background-size: cover;
-  height: 90%
+  display: table;
+  height: 100%;
+  width: 100%;
 }
-
+#bottomBackground{
+  background-color: black;
+  height: 50%;
+  width: 100%;
+}
+#bottomBackground{
+  display: inline-block;
+  text-align: center;
+}
 .rightButton{
   background-color: gray;
   float: right;
@@ -48,4 +63,78 @@
   margin-top: 10%;
   margin-left: 5%;
   font-size: 35px;
+}
+.content{
+  /* margin-top: 100px; */
+}
+.col{
+  display: inline-block;
+  padding: 70px 0px 0px 0px;
+}
+.logo{
+  display: inline-block;
+  text-align: center;
+  padding: 0px 10px 0px 0px;
+}
+.col1{
+  display: inline-block;
+  padding: 0px 70px 40px 40px;
+}
+.col2{
+  display: inline-block;
+  padding: 0px 70px 40px 40px;
+}
+.col3{
+  display: inline-block;
+  padding: 0px 70px 40px 40px;
+}
+#bottomBackground h2 {
+  width: 200px;
+  text-align: center;
+  font: 400 25px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 900;
+}
+.bottomContent{
+  padding: 50px 0px 0px 0px;
+}
+.bottomContent img{
+  padding: 0px 10px 0px 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0px 0px 0px;
+}
+
+li {
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+  font: 200 15px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+  text-decoration: none;
+  font-size: 20px;
+  background: black;
+  color: rgb(51, 204, 255);
 }

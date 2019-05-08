@@ -1,0 +1,156 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+#background{
+  background-color: #fff;
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+#bottomBackground{
+  background-color: black;
+  height: 50%;
+  width: 100%;
+}
+/* ----------------------------------------------------------- */
+/* The navigation bar */
+/* Add a black background color to the top navigation */
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 80px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin-right: 30px;
+  margin-top: 15px;
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 80px;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  color: rgb(51, 204, 255);
+}
+.links{
+  margin-right: 100px;
+}
+.logo{
+  margin-top: 5px;
+  margin-left: 300px;
+  width: 4%;
+}
+/* ----------------------------------------------------------- */
+#background h1{
+  margin-top: 260pt;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+#background h2{
+  margin-top: 25pt;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+}
+
+#bottomBackground{
+  display: inline-block;
+  text-align: center;
+}
+.content{
+  /* margin-top: 100px; */
+}
+.col{
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+}
+.logo{
+  display: inline-block;
+  text-align: center;
+  padding: 0px 10px 0px 0px;
+}
+.col1{
+  display: inline-block;
+  padding: 0px 70px 40px 40px;
+}
+.col2{
+  display: inline-block;
+  padding: 0px 70px 40px 40px;
+}
+.col3{
+  display: inline-block;
+  padding: 0px 70px 40px 40px;
+}
+#bottomBackground h2 {
+  width: 200px;
+  text-align: center;
+  font: 400 25px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 900;
+}
+.bottomContent{
+  padding: 50px 0px 0px 0px;
+}
+.bottomContent img{
+  padding: 0px 10px 0px 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0px 0px 0px;
+}
+
+li {
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+  font: 200 15px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+  font-size: 20px;
+  background: black;
+  color: rgb(51, 204, 255);
+}

@@ -16,7 +16,7 @@
 
 .rightMenu{
   font-family: 'Open Sans', sans-serif;
-  height: 90%;
+  height: 100%;
   background-color: rgba(255, 255, 255);
 }
 
@@ -25,10 +25,10 @@
 }
 
 .selectedItems{
-  height: 85%;
+  height: 100%;
 }
 .btn{
-  margin-left: 20px;
+  margin-left: 10px;
   margin-bottom: 5px;
 }
 .btn-primary{
@@ -49,37 +49,23 @@
   margin-right: 22px;
   margin-left: 20px;
 }
-
-
-/* relevant styles */
-.clothingInfo {
-  background-color: white;
+#selectedOutfits {
+  float: left;
+  width: 202px;;
+  height: 24vh;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
 }
-
-.img_description {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(29, 106, 154, 0.72);
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-
-  /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
+#selectedOutfits img{
+  width: 100% !important;
+  height: 100%!important;
 }
-
-.img_wrap:hover .img_description {
-  visibility: visible;
-  opacity: 1;
+.rightMenu{
+  margin: auto;
 }
-
-#infoHeader{
-  text-align: center;
-}
-
-.clothingInfo{
-  border: 2px solid grey;
+@media only screen and (min-width: 992px){
+  body{
+    overflow-y: hidden;
+  }
 }

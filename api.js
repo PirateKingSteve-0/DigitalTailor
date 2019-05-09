@@ -1,4 +1,3 @@
-var clothingInfo = []
 
 function searchAPI(button) {
   var x = button.id;
@@ -109,24 +108,20 @@ function searchAPI(button) {
             for(let i = 0; i < data['results'].length; i++){
                 var image = data['results'][i]['images'][0]['url'];
                 var code = data['results'][i]['articleCodes'][0];
-                $(".images").append(`<img src="${image}" id="${code}" onclick="clothingDetails(this.id)" style="width:25%">`);
-                clothingInfo.push({
-                  code: data['results'][i]['articleCodes'][0],
-                  name: data['results'][i]['name'],
-                  price: data['results'][i]['price']['formattedValue'],
-                  url: data['baseUrl'] + data['results'][i]['linkPdp'],
-                  images: data['results'][i]['images'][0]['url']
-                });
-              }
-          })
+                $(".images").append(`<img src="${image}" draggable="true" ondragstart="drag(event)" id="${code}" style="width:25%">`);
+            }
+        });
   }
-
-  clothingDetails = (clicked_id) => {
-  // console.log(clothingInfo);
-  let index = clothingInfo.findIndex(item => item.code == clicked_id);
-  document.getElementById("clothName").innerHTML= clothingInfo[index].name;
-  document.getElementById("clothPrice").innerHTML= clothingInfo[index].price;
-  document.getElementById("clothURL").innerHTML= clothingInfo[index].url;
-  document.getElementById("urlID").href=clothingInfo[index].url;
+function allowDrop(ev) {
+  ev.preventDefault();
 }
-  
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}

@@ -49,3 +49,18 @@
   margin-right: 22px;
   margin-left: 20px;
 }
+
+/* relevant styles */
+.clothingInfo {
+  background-color: white;
+  height: 31%;
+}
+
+
+#infoHeader{
+  text-align: center;
+}
+
+.clothingInfo{
+  border: 2px solid grey;
+}

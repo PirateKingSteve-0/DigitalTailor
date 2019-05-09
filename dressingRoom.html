@@ -24,7 +24,7 @@
 
     <!-- Load H&M API -->
     <script src="api.js"></script>
-    
+
     <title>Tailor Me</title>
   </head>
   <body>
@@ -40,11 +40,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="navbar-nav mr-auto">
                   <a class="nav-item nav-link" href="welcome.html">Home <span class="sr-only">(current)</span></a>
-                  <a class="nav-item nav-link" href="about.html">About</a>
+                  <a class="nav-item nav-link" href="welcome.html#bottomBackground">About</a>
               </div>
             </div>
           </nav>
-        </div>  
+        </div>
       </div>
 
       <!-- Main Content -->
@@ -54,7 +54,34 @@
             <div class="col-6">
               <div class="row wardrobe">
                 <div class="col-12">
-                  <input class="form-control" type="text" placeholder="Search..." width="100%">
+                  <p></p>
+                  <button class="btn btn-primary" data-toggle="collapse" data-target="#men">Men</button>
+                  <button class="btn btn-primary" data-toggle="collapse" data-target="#women">Women</button>
+                  <p></p>
+                  <!-- <input id="form-control" type="text" placeholder="Search..." width="100%"> -->
+                  <div class="collapse" id="men">
+                    <span class="genderM">MEN: </span>
+                    <button class="btn btn-primary" id="1" onclick="searchAPI(this)">All</button>
+                    <button class="btn btn-primary" id="2" onclick="searchAPI(this)">Shirts</button>
+                    <button class="btn btn-primary" id="3" onclick="searchAPI(this)">Pants</button>
+                    <button class="btn btn-primary" id="4" onclick="searchAPI(this)">Shorts</button>
+                    <button class="btn btn-primary" id="5" onclick="searchAPI(this)">Jackets</button>
+                    <button class="btn btn-primary" id="6" onclick="searchAPI(this)">Hoodies</button>
+                    <button class="btn btn-primary" id="7" onclick="searchAPI(this)">Longsleeves</button>
+                    <button class="btn btn-primary" id="8" onclick="searchAPI(this)">Blazers</button>
+                  </div>
+                  <p></p>
+                  <div class="collapse" id="women">
+                    <span class="genderW">WOMEN: </span>
+                    <button class="btn btn-primary" id="101" onclick="searchAPI(this)">All</button>
+                    <button class="btn btn-primary" id="102" onclick="searchAPI(this)">Dresses</button>
+                    <button class="btn btn-primary" id="103" onclick="searchAPI(this)">Blouses</button>
+                    <button class="btn btn-primary" id="104" onclick="searchAPI(this)">Cardigans</button>
+                    <button class="btn btn-primary" id="105" onclick="searchAPI(this)">Jeans</button>
+                    <button class="btn btn-primary" id="106" onclick="searchAPI(this)">Tops</button>
+                    <button class="btn btn-primary" id="107" onclick="searchAPI(this)">Shorts</button>
+                    <button class="btn btn-primary" id="108" onclick="searchAPI(this)">Shoes</button>
+                  </div>
                 </div>
                 <div class="col-12">
                   <div class="images"></div>
@@ -81,7 +108,7 @@
             &#169 2019 Stephen Lastimosa George Steven Andrew All Rights Reserved
           </footer>
         </div>
-      </div>  
+      </div>
     </div>
   </body>
 </html>

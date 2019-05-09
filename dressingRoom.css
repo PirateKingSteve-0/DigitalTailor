@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.background{
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 90%
+}
+
+.images{
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .7);
+  overflow: scroll;
+}
+
+.rightMenu{
+  font-family: 'Open Sans', sans-serif;
+  height: 85%;
+  background-color: rgba(255, 255, 255);
+}
+
+.rightMenu > h1{
+  text-align: center;
+}
+
+.selectedItems{
+  height: 85%;
+}
+.btn{
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.btn-primary{
+  background-color: #808080;
+  border-color: #808080;
+}
+.btn-primary:hover{
+  background-color: rgb(34, 154, 193);
+  border-color: rgb(34, 154, 193);
+}
+.genderM{
+  font-weight: 600;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+.genderW{
+  font-weight: 600;
+  margin-right: 22px;
+  margin-left: 20px;
+}
+
+/* relevant styles */
+.clothingInfo {
+  background-color: white;
+  height: 31%;
+}
+
+
+#infoHeader{
+  text-align: center;
+}
+
+.clothingInfo{
+  border: 2px solid grey;
+}

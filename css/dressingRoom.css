@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+html, body{
+  height: 100%;
+}
+
 .background{
   background-image: url(../images/background.jpg);
   background-position: center;
@@ -7,11 +11,15 @@
   height: 90%
 }
 
+.leftMenu{
+  background-color: rgba(255, 255, 255, .85);
+}
+
 .images{
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
-  background-color: rgba(255, 255, 255, .7);
-  overflow: scroll;
+  height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .rightMenu{
@@ -24,9 +32,6 @@
   text-align: center;
 }
 
-.selectedItems{
-  height: 85%;
-}
 .btn{
   margin-left: 20px;
   margin-bottom: 5px;
@@ -57,7 +62,7 @@
 }
 
 .img_description {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
@@ -80,26 +85,34 @@
   text-align: center;
 }
 
-.clothingInfo{
+.outfitInfo{
   border: 2px solid grey;
 }
 
-#selectedOutfits {
+.selectedOutfits {
   float: left;
-  width: 202px;;
-  height: 24vh;
+  width: 180px;
+  height: 20vh;
   margin: 10px;
-  padding: 10px 10px 10px 10px;
   border: 1px solid black;
 }
 
-#selectedOutfits img{
+.selectedOutfits img{
   width: 100% !important;
   height: 100%!important;
+}
+
+.outfits{
+  height: 50%
+}
+
+.col-12.product-image{
+  padding: 0px;
 }
 
 @media only screen and (min-width: 992px){
   body{
     /*Commented out until new change fixes compatability with clothing info and selected outfits*/
-    /*overflow-y: hidden;*/
+    overflow-y: hidden;
+    overflow-x: hidden;
   }

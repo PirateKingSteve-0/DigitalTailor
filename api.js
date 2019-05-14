@@ -109,7 +109,7 @@ function searchAPI(button) {
             for(let i = 0; i < data['results'].length; i++){
                 var image = data['results'][i]['images'][0]['url'];
                 var code = data['results'][i]['articleCodes'][0];
-                $(".images").append(`<img src="${image}" id="${code}" onclick="clothingDetails(this.id)" style="width:25%">`);
+                $(".images").append(`<img src="${image}" draggable="true" ondragstart="drag(event)" id="${code}" onclick="clothingDetails(this.id)" style="width:25%">`);
                 clothingInfo.push({
                   code: data['results'][i]['articleCodes'][0],
                   name: data['results'][i]['name'],
@@ -129,4 +129,19 @@ function searchAPI(button) {
   document.getElementById("clothURL").innerHTML= clothingInfo[index].url;
   document.getElementById("urlID").href=clothingInfo[index].url;
 }
-  
+
+
+/* Functions used to add drag and drop functionality */
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}

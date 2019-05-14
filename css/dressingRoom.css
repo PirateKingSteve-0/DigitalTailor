@@ -110,6 +110,14 @@ html, body{
   padding: 0px;
 }
 
+.share-outfit-checkboxes{
+  float: center;
+}
+
+.share-outfit-checkboxes input{
+  margin-right: 10px;
+}
+
 @media only screen and (min-width: 992px){
   body{
     /*Commented out until new change fixes compatability with clothing info and selected outfits*/

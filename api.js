@@ -38,7 +38,7 @@ function searchAPI(button) {
       break;
     //blazers
     case '8':
-      var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_blazerssuits_blazers&country=us&lang=en';
+      var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_shoes&country=us&lang=en';
       break;
   //women
     //all
@@ -105,6 +105,33 @@ function searchAPI(button) {
               }
           })
   }
+
+function shareOutfits(){
+  let sender = $("#shareYourName").val();
+  let receiver = $("#shareTheirName").val();
+  let email = $("#shareTheirEmail").val();
+
+  if(!email.includes("@") || !email.includes(".")){
+    alert("Email should contain an @ and .");
+    return false;
+  }
+
+  let outfits = [];
+
+  for(i = 1; i <= 4; i++){
+    if(document.getElementById(`outfit${i}-share`).checked){
+      let outfit = [];
+      let outfit_raw = document.getElementById(`outfit${i}`).getElementsByTagName('img');
+      for(let item of outfit_raw){
+        let lookup_id = item.id.replace("-clone", "");
+        outfit.push(clothingInfo[lookup_id]);
+      }
+      outfits[`outfit${i}`] = outfit;
+    }
+  }
+
+  console.log(outfits);
+}
 
 /* Functions used to add drag and drop functionality */
 function allowDrop(ev) {

@@ -9,9 +9,9 @@
 
 .images{
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
+  height: 25%;
   background-color: rgba(255, 255, 255, .7);
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .rightMenu{
@@ -57,7 +57,7 @@
 }
 
 .img_description {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
@@ -89,7 +89,6 @@
   width: 202px;;
   height: 24vh;
   margin: 10px;
-  padding: 10px 10px 10px 10px;
   border: 1px solid black;
 }
 
@@ -98,8 +97,13 @@
   height: 100%!important;
 }
 
+.col-12.product-image{
+  padding: 0px;
+}
+
 @media only screen and (min-width: 992px){
   body{
     /*Commented out until new change fixes compatability with clothing info and selected outfits*/
     /*overflow-y: hidden;*/
+    overflow-x: hidden;
   }

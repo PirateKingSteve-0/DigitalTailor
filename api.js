@@ -105,11 +105,18 @@ function searchAPI(button) {
         }
     }).then(res => res.json())
         .then(function (data){
-            $(".images").empty();
+            $(".products").empty();
             for(let i = 0; i < data['results'].length; i++){
                 var image = data['results'][i]['images'][0]['url'];
                 var code = data['results'][i]['articleCodes'][0];
-                $(".images").append(`<img src="${image}" draggable="true" ondragstart="drag(event)" id="${code}" onclick="clothingDetails(this.id)" style="width:25%">`);
+                $(".products").append(`
+                  <div class="col-3 product border border-secondary">
+                  <div class="row">
+                    <div class="col-12 product-name text-center">${data['results'][i]['name']}</div>
+                      <div class="col-12 product-image border-top border-bottom border-dark"><img src="${image}" draggable="true" ondragstart="drag(event)" id="${code}" onclick="clothingDetails(this.id)" style="width:100%"></div>
+                      <div class="col-12 product-price text-center">${data['results'][i]['price']['formattedValue']}</div>
+                    </div>
+                  </div>`);
                 clothingInfo.push({
                   code: data['results'][i]['articleCodes'][0],
                   name: data['results'][i]['name'],
@@ -143,5 +150,15 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  var nodeCopy = document.getElementById(data).cloneNode(true);
+  nodeCopy.id = nodeCopy.id+"-clone"
+  ev.target.appendChild(nodeCopy);
+}
+
+function dropRemove(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  var node = document.getElementById(data);
+  if(node.id.includes("-clone"))
+    node.parentNode.removeChild(node);
 }

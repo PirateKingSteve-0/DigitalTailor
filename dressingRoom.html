@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Include FontAwesome icon set -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <!--Replace with welcome.css with a CSS file that contains a background -->
@@ -52,8 +52,8 @@
         <div class="col-12 background">
           <div class="row">
             <div class="col-6">
-              <div class="row wardrobe">
-                <div class="col-12">
+              <div class="row">
+                <div class="col-12 shadow-sm">
                   <p></p>
                   <button class="btn btn-primary" data-toggle="collapse" data-target="#men">Men</button>
                   <button class="btn btn-primary" data-toggle="collapse" data-target="#women">Women</button>
@@ -84,12 +84,20 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="images"></div>
+                  <div class="images">
+                    <div class="row products">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-6 rightMenu">
               <h1>Selected Outfits</h1>
+              <div class="row">
+                <div class="col-12 removeItem">
+                  <div id="removeItem" ondrop="dropRemove(event)" ondragover="allowDrop(event)"><i class="fas fa-trash-alt fa-2x"></i>Trash this item</div> 
+                </div>
+              </div>
               <div class="row">
                 <div class="col-12">
                   <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>

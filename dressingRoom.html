@@ -28,7 +28,7 @@
     <title>Tailor Me</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid h-100">
       <!-- Navbar -->
       <div class="row">
         <div class="col-12">
@@ -83,10 +83,8 @@
                     <button class="btn btn-primary" id="108" onclick="searchAPI(this)">Shoes</button>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="images">
-                    <div class="row products">
-                    </div>
+                <div class="col-12 images">
+                  <div class="row products">
                   </div>
                 </div>
               </div>
@@ -98,40 +96,39 @@
                   <div id="removeItem" ondrop="dropRemove(event)" ondragover="allowDrop(event)"><i class="fas fa-trash-alt fa-2x"></i>Trash this item</div> 
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12">
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  <div id="selectedOutfits" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 selectedItems">
+              <div class="outfits">
+                <div class="row">
+                  <div class="col-3 text-center" id="outfit1">
+                    <div class="selectedOutfits" id="outfit1-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit1-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit1-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    Total: $<span id="outfit1-total">0</span>
 
+                  </div>
+                  <div class="col-3 text-center" id="outfit2">
+                    <div class="selectedOutfits" id="outfit2-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit2-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit2-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    Total: $<span id="outfit2-total">0</span>
+                  </div>
+                  <div class="col-3 text-center" id="outfit3">
+                    <div class="selectedOutfits" id="outfit3-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit3-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit3-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    Total: $<span id="outfit3-total">0</span>
+                  </div>
+                  <div class="col-3 text-center" id="outfit4">
+                    <div class="selectedOutfits" id="outfit4-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit4-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="selectedOutfits" id="outfit4-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    Total: $<span id="outfit4-total">0</span>
+                  </div>
                 </div>
-                <div class="col-12 clothingInfo">
+              </div>
+              <div class="row">
+                <div class="col-12 outfitInfo">
                   <section>
-                      <h2 id="infoHeader">Clothing Info</h2><br/>
-                      <p>Name: <span class id="clothName"></span> </p>
-                      <p>Price: <span class id="clothPrice"></span></p>
-                      <p>URL: <a id="urlID" href="#" target="_blank"><span class id="clothURL"></span></a></p>
+                      <h2 id="infoHeader">Share Outfit</h2><br/>
                   </section>  
                 </div>
               </div>

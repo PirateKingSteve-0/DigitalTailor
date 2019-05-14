@@ -1,5 +1,10 @@
 var clothingInfo = []
 
+let outfit1_total = 0;
+let outfit2_total = 0;
+let outfit3_total = 0;
+let outfit4_total = 0;
+
 function searchAPI(button) {
   var x = button.id;
   switch(x){
@@ -72,32 +77,6 @@ function searchAPI(button) {
       false;
   }
 
-  //INCASE WE WANT TO SEARCH, THIS WORKS TOO
-
-  // if(userInput == "shirts"){
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_shirts&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }else if (userInput == "trousers") {
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_trousers_dressed&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }
-  // else if (userInput == "blazers") {
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_blazerssuits_blazers&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }
-  // else if (userInput == "shorts") {
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_shorts&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }
-  // else if (userInput == "hoodies") {
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_hoodiessweatshirts_sweatshirts&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }
-  // else if (userInput == "jackets") {
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_men_jacketscoats_bomberjackets&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }
-  // else if (userInput == "longsleeve") {
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_tshirtstanks_longsleeve&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }
-  // else if (userInput == "all") {
-  //   var url = 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_all&sortBy=stock&concepts=H%26M+MAN&country=us&lang=en&currentpage=0&pagesize=30';
-  // }
-
     fetch(url, {
         headers: {
             'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com',
@@ -111,32 +90,21 @@ function searchAPI(button) {
                 var code = data['results'][i]['articleCodes'][0];
                 $(".products").append(`
                   <div class="col-3 product border border-secondary">
-                  <div class="row">
-                    <div class="col-12 product-name text-center">${data['results'][i]['name']}</div>
-                      <div class="col-12 product-image border-top border-bottom border-dark"><img src="${image}" draggable="true" ondragstart="drag(event)" id="${code}" onclick="clothingDetails(this.id)" style="width:100%"></div>
+                    <div class="row">
+                      <div class="col-12 product-name text-center">${data['results'][i]['name']}</div>
+                      <div class="col-12 product-image border-top border-bottom border-dark"><img src="${image}" draggable="true" ondragstart="drag(event)" id="${code}" style="width:100%"></div>
                       <div class="col-12 product-price text-center">${data['results'][i]['price']['formattedValue']}</div>
                     </div>
                   </div>`);
-                clothingInfo.push({
-                  code: data['results'][i]['articleCodes'][0],
+                clothingInfo[data['results'][i]['articleCodes'][0]] = {
                   name: data['results'][i]['name'],
                   price: data['results'][i]['price']['formattedValue'],
                   url: data['baseUrl'] + data['results'][i]['linkPdp'],
                   images: data['results'][i]['images'][0]['url']
-                });
+                };
               }
           })
   }
-
-  clothingDetails = (clicked_id) => {
-  // console.log(clothingInfo);
-  let index = clothingInfo.findIndex(item => item.code == clicked_id);
-  document.getElementById("clothName").innerHTML= clothingInfo[index].name;
-  document.getElementById("clothPrice").innerHTML= clothingInfo[index].price;
-  document.getElementById("clothURL").innerHTML= clothingInfo[index].url;
-  document.getElementById("urlID").href=clothingInfo[index].url;
-}
-
 
 /* Functions used to add drag and drop functionality */
 function allowDrop(ev) {
@@ -151,6 +119,26 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   var nodeCopy = document.getElementById(data).cloneNode(true);
+
+  switch(ev.target.parentNode.id){
+    case 'outfit1':
+      outfit1_total += parseFloat(clothingInfo[nodeCopy.id].price.replace("$", ""));
+      $('#outfit1-total').text(outfit1_total.toFixed(2));
+      break;
+    case 'outfit2':
+      outfit2_total += parseFloat(clothingInfo[nodeCopy.id].price.replace("$", ""));
+      $('#outfit2-total').text(outfit2_total.toFixed(2));
+      break;
+    case 'outfit3':
+      outfit3_total += parseFloat(clothingInfo[nodeCopy.id].price.replace("$", ""));
+      $('#outfit3-total').text(outfit3_total.toFixed(2));
+      break;
+    case 'outfit4':
+      outfit4_total += parseFloat(clothingInfo[nodeCopy.id].price.replace("$", ""));
+      $('#outfit4-total').text(outfit4_total.toFixed(2));
+      break;
+  }
+
   nodeCopy.id = nodeCopy.id+"-clone"
   ev.target.appendChild(nodeCopy);
 }
@@ -159,6 +147,25 @@ function dropRemove(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   var node = document.getElementById(data);
+  let lookup_id = data.replace("-clone", "");
+  switch(node.parentNode.parentNode.id){
+    case 'outfit1':
+      outfit1_total -= parseFloat(clothingInfo[lookup_id].price.replace("$", ""));
+      $('#outfit1-total').text(Math.abs(outfit1_total.toFixed(2)));
+      break;
+    case 'outfit2':
+      outfit2_total -= parseFloat(clothingInfo[lookup_id].price.replace("$", ""));
+      $('#outfit2-total').text(Math.abs(outfit2_total.toFixed(2)));
+      break;
+    case 'outfit3':
+      outfit3_total -= parseFloat(clothingInfo[lookup_id].price.replace("$", ""));
+      $('#outfit3-total').text(Math.abs(outfit3_total.toFixed(2)));
+      break;
+    case 'outfit4':
+      outfit4_total -= parseFloat(clothingInfo[lookup_id].price.replace("$", ""));
+      $('#outfit4-total').text(Math.abs(outfit4_total.toFixed(2)));
+      break;
+  }
   if(node.id.includes("-clone"))
     node.parentNode.removeChild(node);
 }

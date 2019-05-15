@@ -37,62 +37,55 @@
 
     <title>Tailor Me</title>
   </head>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="welcome.html">Digital Tailor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link active" href="welcome.html">Home <span class="sr-only">(current)</span></a>
+      </div>
+  </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="modalTitle">Share Outfits</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="shareYourName">Your Name</label>
+              <input type="text" class="form-control" id="shareYourName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="shareTheirName">Receipient's Name</label>
+              <input type="text" class="form-control" id="shareTheirName" placeholder="Enter their name">
+            </div>
+            <div class="form-group">
+              <label for="shareTheirEmail">Receipient's Email</label>
+              <input type="email" class="form-control" id="shareTheirEmail" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="shareOutfits()">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <body>
     <div class="container-fluid h-100">
-      <!-- Navbar -->
-      <div class="row">
-        <div class="col-12">
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="welcome.html">Digital Tailor</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="navbar-nav mr-auto">
-                  <a class="nav-item nav-link" href="welcome.html">Home <span class="sr-only">(current)</span></a>
-                  <a class="nav-item nav-link" href="welcome.html#bottomBackground">About</a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-
-
-      <!-- Modal -->
-      <div class="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-center" id="modalTitle">Share Outfits</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group">
-                  <label for="shareYourName">Your Name</label>
-                  <input type="text" class="form-control" id="shareYourName" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                  <label for="shareTheirName">Receipient's Name</label>
-                  <input type="text" class="form-control" id="shareTheirName" placeholder="Enter their name">
-                </div>
-                <div class="form-group">
-                  <label for="shareTheirEmail">Receipient's Email</label>
-                  <input type="email" class="form-control" id="shareTheirEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="shareOutfits()">Share</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Main Content -->
       <div class="row">
         <div class="col-12 background">
@@ -139,7 +132,7 @@
               <h1>Selected Outfits</h1>
               <div class="row">
                 <div class="col-12 removeItem">
-                  <div id="removeItem" ondrop="dropRemove(event)" ondragover="allowDrop(event)"><i class="fas fa-trash-alt fa-2x"></i>Trash this item</div> 
+                  <div id="removeItem" ondrop="dropRemove(event)" ondragover="allowDrop(event)"><i class="fas fa-trash-alt fa-2x"></i>Trash this item</div>
                 </div>
               </div>
               <div class="outfits">

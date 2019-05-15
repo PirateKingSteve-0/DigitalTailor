@@ -30,22 +30,71 @@
 
     <title>Digital Tailor</title>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">Digital Tailor</a>
+      <a class="navbar-brand" href="#welcome.html">Digital Tailor</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#bottomBackground">More</a>
-            <button class="btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#exampleModal"> Button
+            <a class="nav-item nav-link active" href="welcome.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="welcome.html#bottomBackground">More</a>
+            <button class="btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#loginpage">  Login
             </button>
         </div>
-
-
-      </div>
+    </div>
     </nav>
-  </head>
+
+
+  <div class="modal fade" id="loginpage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title col-12 text-center" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class = "col-5">
+                <h5 class ="text-center"> Login with: </h5>
+              </div>
+            </div>
+
+            <div class = "row mt-2">
+              <div class="col-4">  <img src="images/instagram.png" class="center-block img-responsive" width="70" height="50"> </div>
+              <div class="col-4">  <img src="images/twitter.png" class="center-block img-responsive" width="70" height="50"> </div>
+              <div class="col-4">  <img src="images/facebook.png" class="center-block img-responsive"  width="70" height="50"> </div>
+            </div>
+
+          <div class="row mt-3">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+                  </div>
+                </form>
+          </div>
+        </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <body>
     <div class="background">
       <h1 class='quotes'>"When in doubt, wear red." - Bill Blass</h1>
@@ -101,53 +150,3 @@
       </div>
   </footer>
 </html>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title col-12 text-center" id="exampleModalLabel">Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <div class="container">
-        <div class="row">
-          <div class = "row">
-            <h5 class = "col-12 text-center">Login with:
-            </h5>
-          </div>
-          <div class = "row align-items-start">
-            <div class="col">  <img src="images/instagram.png" width="70" height="50"> </div>
-            <div class="col">  <img src="images/twitter.png" width="70" height="50"> </div>
-            <div class="col">  <img src="images/facebook.png" width="70" height="50"> </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
-  </div>
-</form>
-        </div>
-      </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>

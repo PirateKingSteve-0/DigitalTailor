@@ -29,59 +29,37 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="navbar-nav mr-auto">
           <a class="nav-item nav-link active" href="welcome.html">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="welcome.html#bottomBackground">More</a>
-          <button class="btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#loginpage">  Login
-          </button>
+          <a class="nav-item nav-link btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#loginpage">Login</a>
+          <a class="nav-item nav-link" href="#bottomBackground">More</a>
       </div>
   </div>
   </nav>
-
-
-
-  <div class="modal fade" id="loginpage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <!-- Modal -->
+  <div class="modal fade" id="loginpage" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title col-12 text-center" id="exampleModalLabel">Login</h5>
+          <h5 class="modal-title text-center" id="modalTitle">Login</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class = "col-5">
-                <h5 class ="text-center"> Login with: </h5>
-              </div>
+          <form>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="shareTheirEmail" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-
-            <div class = "row mt-2">
-              <div class="col-4">  <img src="images/instagram.png" class="center-block img-responsive" width="70" height="50"> </div>
-              <div class="col-4">  <img src="images/twitter.png" class="center-block img-responsive" width="70" height="50"> </div>
-              <div class="col-4">  <img src="images/facebook.png" class="center-block img-responsive"  width="70" height="50"> </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" class="form-control" id="shareTheirName" placeholder="Enter password">
             </div>
-
-          <div class="row mt-3">
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
-                  </div>
-                </form>
-          </div>
-        </div>
-
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="dressingRoom.html"><button type="button" class="btn btn-primary">Login</button></a>
         </div>
       </div>
     </div>
@@ -89,7 +67,6 @@
 
   <body class = "background">
     <div class="container-fluid">
-
       <!-- Main Content -->
       <div class="row">
         <div class="col-12">

@@ -20,41 +20,91 @@
 
     <title>About Us</title>
   </head>
-  <body>
-    <div class="container-fluid">
-      <!-- Navbar -->
-      <div class="row">
-        <div class="col-12">
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="welcome.html">Digital Tailor</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="navbar-nav mr-auto">
-                  <a class="nav-item nav-link" href="welcome.html">Home <span class="sr-only">(current)</span></a>
-                  <a class="nav-item nav-link" href="welcome.html#bottomBackground">More</a>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#welcome.html">Digital Tailor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link active" href="welcome.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="welcome.html#bottomBackground">More</a>
+          <button class="btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#loginpage">  Login
+          </button>
+      </div>
+  </div>
+  </nav>
+
+
+
+  <div class="modal fade" id="loginpage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title col-12 text-center" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class = "col-5">
+                <h5 class ="text-center"> Login with: </h5>
               </div>
             </div>
-          </nav>
+
+            <div class = "row mt-2">
+              <div class="col-4">  <img src="images/instagram.png" class="center-block img-responsive" width="70" height="50"> </div>
+              <div class="col-4">  <img src="images/twitter.png" class="center-block img-responsive" width="70" height="50"> </div>
+              <div class="col-4">  <img src="images/facebook.png" class="center-block img-responsive"  width="70" height="50"> </div>
+            </div>
+
+          <div class="row mt-3">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+                  </div>
+                </form>
+          </div>
+        </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <body class = "background">
+    <div class="container-fluid">
 
       <!-- Main Content -->
       <div class="row">
-        <div class="col-12 background">
+        <div class="col-12">
           <div class="about">
             <h1>About Us</h1>
             <hr>
             <p> Digital Tailor is a new and upcoming startup that seeks to be an outlet for those who are in need of a new style. We here at Digital Tailor believe that everyone has the right to look good. Through our website, you will be paired with a tailor who can help you find a style thats right for you. So go ahead and try out out new wardrobe styling now.</p>
             <hr>
             <p> Have a good sense of style? Click the link below to find out how you can become a Digital Tailor and help style others.<br> <a href="#"> Become a Tailor (Coming Soon) </a></p>
-
           </div>
         </div>
       </div>
 
       <!-- Footer -->
+    <!--
       <div class="row">
         <div class="col-12">
           <footer>
@@ -64,4 +114,47 @@
       </div>
     </div>
   </body>
+</html>
+-->
+
+<footer>
+    <div id="bottomBackground">
+      <div class="content">
+        <div class="col">.</div>
+        <!-- <div class="logo">
+          <img src="assets/images/icons/loginIcon.svg" width="100" height="100">
+        </div> -->
+        <div class="col1">
+          <h2>Company</h2>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">For Record</a></li>
+            </ul>
+        </div>
+        <div class="col2">
+          <h2>Communities</h2>
+            <ul>
+              <li><a href="#">Brands</a></li>
+              <li><a href="#">Vendors</a></li>
+              <li><a href="#">Investors</a></li>
+            </ul>
+        </div>
+        <div class="col2">
+          <h2>Useful Links</h2>
+            <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">For Artists</a></li>
+              <li><a href="#">Developers</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="bottomContent">
+        <img src="images/instagram.png" width="70" height="50">
+        <img src="images/twitter.png" width="70" height="50">
+        <img src="images/facebook.png" width="70" height="50">
+      </div>
+
+    </div>
+</footer>
 </html>

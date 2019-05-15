@@ -9,13 +9,9 @@ function sendEmail(){
         "name": name,
         "email": email,
     }
-    
-    console.log(templateParams["name"]);
-    console.log(templateParams["email"]);
-    console.log(templateParams);
 
     // SDK for the emailJs.com API. Pass in templateParams
-    emailjs.send('lanitech92_gmail_com', 'template_JrdgeTBI', templateParams)
+    emailjs.send('gmail', 'tailorme_request', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
         }, function(error) {
@@ -72,7 +68,7 @@ function sendShareEmail(sender, receiver, email, outfits){
     }
 
     // SDK for the emailJs.com API. Pass in templateParams
-    emailjs.send('george_d_calderon', 'template_shareOutfits', templateParams)
+    emailjs.send('gmail', 'template_shareOutfits', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
         }, function(error) {

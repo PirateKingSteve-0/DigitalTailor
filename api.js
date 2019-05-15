@@ -124,13 +124,12 @@ function shareOutfits(){
       let outfit_raw = document.getElementById(`outfit${i}`).getElementsByTagName('img');
       for(let item of outfit_raw){
         let lookup_id = item.id.replace("-clone", "");
-        outfit.push(clothingInfo[lookup_id]);
+        outfit[item.parentNode.id.replace(`outfit${i}-`, "")] = clothingInfo[lookup_id];
       }
       outfits[`outfit${i}`] = outfit;
     }
-  }
-
-  console.log(outfits);
+  }  
+  sendShareEmail(sender, receiver, email, outfits);
 }
 
 /* Functions used to add drag and drop functionality */

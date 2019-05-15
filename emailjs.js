@@ -14,6 +14,7 @@ function sendEmail(){
     emailjs.send('gmail', 'tailorme_request', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
+            $('#email-alert').css('display', 'block');
             $('#email-alert').css('visibility', 'visible');
         }, function(error) {
             console.log('FAILED...', error);

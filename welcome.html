@@ -38,7 +38,11 @@
         <div class="navbar-nav mr-auto">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#bottomBackground">More</a>
+            <button class="btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#exampleModal"> Button
+            </button>
         </div>
+
+
       </div>
     </nav>
   </head>
@@ -50,8 +54,8 @@
       <form  id="contact-form" action="#">
         Name
         <input type="text" id="formName" name="name" value="" placeholder="">
-        <br> Send a "Tailor Me" E-mail 
-        <input type="text" id="formEmail" name="email" value="" placeholder=""> 
+        <br> Send a "Tailor Me" E-mail
+        <input type="text" id="formEmail" name="email" value="" placeholder="">
         <input type="submit" value="Send" onclick="sendEmail()">
       </form>
     </div>
@@ -97,3 +101,53 @@
       </div>
   </footer>
 </html>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title col-12 text-center" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="container">
+        <div class="row">
+          <div class = "row">
+            <h5 class = "col-12 text-center">Login with:
+            </h5>
+          </div>
+          <div class = "row align-items-start">
+            <div class="col">  <img src="images/instagram.png" width="70" height="50"> </div>
+            <div class="col">  <img src="images/twitter.png" width="70" height="50"> </div>
+            <div class="col">  <img src="images/facebook.png" width="70" height="50"> </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+  </div>
+</form>
+        </div>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

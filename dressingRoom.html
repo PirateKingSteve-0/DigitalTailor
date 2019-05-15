@@ -25,6 +25,16 @@
     <!-- Load H&M API -->
     <script src="api.js"></script>
 
+    <!-- Load EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_f5PXxWDZ73Aw6dCBCJz07");
+       })();
+    </script>
+    <script src="emailjs.js"></script>
+
+
     <title>Tailor Me</title>
   </head>
   <body>
@@ -44,6 +54,42 @@
               </div>
             </div>
           </nav>
+        </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="modalTitle">Share Outfits</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="shareYourName">Your Name</label>
+                  <input type="text" class="form-control" id="shareYourName" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="shareTheirName">Receipient's Name</label>
+                  <input type="text" class="form-control" id="shareTheirName" placeholder="Enter their name">
+                </div>
+                <div class="form-group">
+                  <label for="shareTheirEmail">Receipient's Email</label>
+                  <input type="email" class="form-control" id="shareTheirEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="shareOutfits()">Share</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -68,7 +114,7 @@
                     <button class="btn btn-primary" id="5" onclick="searchAPI(this)">Jackets</button>
                     <button class="btn btn-primary" id="6" onclick="searchAPI(this)">Hoodies</button>
                     <button class="btn btn-primary" id="7" onclick="searchAPI(this)">Longsleeves</button>
-                    <button class="btn btn-primary" id="8" onclick="searchAPI(this)">Blazers</button>
+                    <button class="btn btn-primary" id="8" onclick="searchAPI(this)">Shoes</button>
                   </div>
                   <p></p>
                   <div class="collapse" id="women">
@@ -99,6 +145,7 @@
               <div class="outfits">
                 <div class="row">
                   <div class="col-3 text-center" id="outfit1">
+                    <br>Outifit 1<br>
                     <div class="selectedOutfits" id="outfit1-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit1-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit1-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -106,18 +153,21 @@
 
                   </div>
                   <div class="col-3 text-center" id="outfit2">
+                    <br>Outifit 2<br>
                     <div class="selectedOutfits" id="outfit2-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit2-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit2-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     Total: $<span id="outfit2-total">0</span>
                   </div>
                   <div class="col-3 text-center" id="outfit3">
+                    <br>Outifit 3<br>
                     <div class="selectedOutfits" id="outfit3-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit3-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit3-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     Total: $<span id="outfit3-total">0</span>
                   </div>
                   <div class="col-3 text-center" id="outfit4">
+                    <br>Outifit 4<br>
                     <div class="selectedOutfits" id="outfit4-top" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit4-mid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="selectedOutfits" id="outfit4-bot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -128,7 +178,21 @@
               <div class="row">
                 <div class="col-12 outfitInfo">
                   <section>
-                      <h2 id="infoHeader">Share Outfit</h2><br/>
+                      <h3 id="infoHeader">Share Outfits</h3>
+                      <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-8">
+                          <form class="form-group">
+                            <span class="share-outfit-checkboxes">
+                              Outfit 1 <input type="checkbox" id="outfit1-share">
+                              Outfit 2 <input type="checkbox" id="outfit2-share">
+                              Outfit 3 <input type="checkbox" id="outfit3-share">
+                              Outfit 4 <input type="checkbox" id="outfit4-share">
+                            </span>
+                            <button type="button" class="btn btn-primary share-button" name="share-outfits" data-toggle="modal" data-target="#share-modal"> Share
+                          </form>
+                        </div>
+                      </div>
                   </section>  
                 </div>
               </div>

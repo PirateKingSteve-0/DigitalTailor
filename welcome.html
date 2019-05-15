@@ -37,16 +37,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav mr-auto">
             <a class="nav-item nav-link active" href="welcome.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#loginpage">Login</a>
             <a class="nav-item nav-link" href="welcome.html#bottomBackground">More</a>
-            <button class="btn btn-secondary bg-transparent border-0" data-toggle="modal" data-target="#loginpage">  Login
-            </button>
         </div>
     </div>
     </nav>
 
 
   <div class="modal fade" id="loginpage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title col-12 text-center" id="exampleModalLabel">Login</h5>
@@ -98,7 +97,7 @@
   <body>
     <div class="background">
       <h1 class='quotes'>"When in doubt, wear red." - Bill Blass</h1>
-      <button class="rightButton" type="button"> <a href="dressingRoom.html">Get Dressed</a> </button>
+      <button class="rightButton" type="button"> <a data-toggle="modal" data-target="#loginpage">Get Dressed</a> </button>
       <!-- Form that will send on email on submit/send -->
       <form  id="contact-form" action="#">
         Name

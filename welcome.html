@@ -42,6 +42,7 @@
         </div>
     </div>
     </nav>
+    
 
 
   <!-- Modal -->
@@ -78,6 +79,9 @@
 
   <body>
     <div class="background">
+      <div class="row" style="visibility: hidden;">
+        <div class="col-12 alert alert-success text-center" id="email-alert" role="alert">Email sent succcessfully!</div>
+      </div>
       <h1 class='quotes'>"When in doubt, wear red." - Bill Blass</h1>
       <button class="rightButton" type="button"> <a data-toggle="modal" data-target="#loginpage">Get Dressed</a> </button>
       <!-- Form that will send on email on submit/send -->
@@ -86,7 +90,7 @@
         <input type="text" id="formName" name="name" value="" placeholder="">
         <br> Send a "Tailor Me" E-mail
         <input type="text" id="formEmail" name="email" value="" placeholder="">
-        <input type="submit" value="Send" onclick="sendEmail()">
+        <input type="button" value="Send" onclick="sendEmail()">
       </form>
     </div>
   </body>

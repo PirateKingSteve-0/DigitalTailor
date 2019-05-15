@@ -14,6 +14,7 @@ function sendEmail(){
     emailjs.send('gmail', 'tailorme_request', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
+            $('#email-alert').css('visibility', 'visible');
         }, function(error) {
             console.log('FAILED...', error);
     });
@@ -71,7 +72,10 @@ function sendShareEmail(sender, receiver, email, outfits){
     emailjs.send('gmail', 'template_shareOutfits', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
+            $('#email-alert').css('display', 'block');
+            $('#email-alert').css('visibility', 'visible');
         }, function(error) {
             console.log('FAILED...', error);
     });
+    $("#share-modal").modal('hide');
 }
